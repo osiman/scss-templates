@@ -106,14 +106,7 @@ gulp.task('styles', function() {
     .pipe(gulp.dest(bases.dist + 'css'))
 });
 
-gulp.task('fileinclude', function() {
-  gulp.src(['index.html'])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
-    .pipe(gulp.dest('./'));
-});
+
 
 gulp.task('themes', function() {
   return gulp.src(bases.app + 'scss/themes/*.scss')
